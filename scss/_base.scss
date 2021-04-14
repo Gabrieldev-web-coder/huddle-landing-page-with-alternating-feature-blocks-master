@@ -1,0 +1,20 @@
+$Primary-color:hsl(322, 100%, 66%);
+$Neutral-colors:hsl(193, 100%, 96%),hsl(192, 100%, 9%),hsl(208, 11%, 55%);
+$Body-font-size:18px;
+$Heading-font-family-weight:'Poppins', sans-serif, 600;
+$Body-call-to-action-family-weight:'Open Sans', sans-serif, 400,700;
+
+body{
+    color: nth($Neutral-colors,3);
+    font-size: $Body-font-size;
+    font-family: nth($Body-call-to-action-family-weight,1);
+    font-weight: nth($Body-call-to-action-family-weight,3);
+}
+
+figure{
+    margin: 0;
+    text-align: center;
+    img{
+        width: 80%;
+    }
+}

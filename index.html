@@ -4,73 +4,104 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/iconfonts.css">
+  <link rel="stylesheet" href="/scss/styles.css">
+  <link rel="stylesheet" href="/css/normalize.css">
   <title>Frontend Mentor | Huddle landing page with alternating feature blocks</title>
 </head>
 <body>
-  <nav>
-    <figure>
-      <img src="images/logo.svg" alt="Huddle-logo">
+  <header id="header">
+  <nav id="header__nav">
+    <figure class="header__figure">
+      <img class="header__img" src="images/logo.svg" alt="Huddle-logo">
     </figure>
-    <div>
-      <span>Try It Free</span>
+    <div class="header__try">
+      <span class="header__span">Try It Free</span>
     </div>
   </nav>
-  <header>
-    <figure>
-      <img src="images/illustration-mockups.svg" alt="Mockups">
-    </figure>
-    <h1>
+    <h1 class="header__h1">
       Build The Community Your Fans Will Love
     </h1>
-    <p>Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
+    <p class="header__p">Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
       Create connections with your users as you engage in genuine discussion.</p>
-    <div>
-      <span>Get Started For Free</span>
+    <div class="header__btn">
+      <span class="header__span">Get Started For Free</span>
     </div>
+    <figure class="header__figure">
+      <img class="header__img" src="images/illustration-mockups.svg" alt="Mockup">
+    </figure>
   </header>
-  <main>
-    <article>
-      <h2>Grow Together</h2>
-      <p>Generate meaningful discussions with your audience and build a strong, loyal community. 
+  <main id="main">
+    <article class="main__article">
+      <figure class="main__figure">
+        <img class="main__img" src="images/illustration-grow-together.svg" alt="Huddle-grow">
+      </figure>
+      <h2 class="main__h2">Grow Together</h2>
+      <p class="main__p">Generate meaningful discussions with your audience and build a strong, loyal community. 
         Think of the insightful conversations you miss out on with a feedback form.</p>
       </article>
-
-      <article>
-        <h2>Flowing Conversations</h2>
-        <p>You wouldn't paginate a conversation in real life, so why do it online? Our threads
+      <article class="main__article">
+        <figure class="main__figure">
+          <img class="main__img" src="images/illustration-flowing-conversation.svg" alt="Huddle-conversation">
+        </figure>
+        <h2 class="main__h2">Flowing Conversations</h2>
+        <p class="main__p">You wouldn't paginate a conversation in real life, so why do it online? Our threads
           have just-in-time loading for a more natural flow.</p>
       </article>
-
-      <article>
-        <h2>Your Users</h2>
-        <p>It takes no time at all to integrate Huddle with your app's authentication solution. 
+      <article class="main__article">
+        <figure class="main__figure">
+          <img class="main__img" src="images/illustration-your-users.svg" alt="Huddle-users">
+        </figure>
+        <h2 class="main__h2">Your Users</h2>
+        <p class="main__p">It takes no time at all to integrate Huddle with your app's authentication solution. 
           This means, once signed in to your app, your users can start chatting immediately.</p>
       </article>
-      <div>
-        <h2>Ready To Build Your Community?</h2>
-        <span>Get Started For Free</span>
+      <div class="header__btn">
+        <h2 class="main__h2">Ready To Build Your Community?</h2>
+        <span class="header__span">Get Started For Free</span>
       </div>  
     </main>
-    <footer>
-      <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-          incididunt ut labore et dolore magna aliqua</p>
-        <address>
-          <span>+1-543-123-4567</span>
-          <span>example@huddle.com</span>
+    <footer id="footer">
+      <div id="footer__contact">
+        <figure class="footer__figure">
+          <img class="footer__img" src="/images/logo.svg" alt="Huddle-logo">
+        </figure>
+
+        <figure class="footer__figure">
+          <img class="footer__img" src="/images/icon-location.svg" alt="Location">
+          <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+            incididunt ut labore et dolore magna aliqua</figcaption>
+        </figure>
+        <address class="footer__address">
+          <figure class="footer__figure">
+           <img class="footer__img" src="images/icon-phone.svg" alt="Phone">
+           <figcaption>+1-543-123-4567</figcaption> 
+          </figure>
+          <figure class="footer__figure">
+            <img class="footer__img" src="images/icon-email.svg" alt="Email">
+            <figcaption>example@huddle.com</figcaption> 
+          </figure>
         </address>
       </div>
-      <div>
-
-        About Us
-        What We Do
-        FAQ
-        
-        Career
-        Blog
-        Contact Us
-        
-        &copy; Copyright 2018 Huddle. All rights reserved.
+      <div id="footer__about">
+        <span class="footer__span">About Us</span>
+        <span class="footer__span">What We Do</span>
+        <span class="footer__span">FAQ</span>
+        <span class="footer__span">Career</span>
+        <span class="footer__span">Blog</span>
+        <span class="footer__span">Contact Us</span>
+      </div>
+      <div id="footer__social">
+        <i class="icon-facebook"></i>
+        <i class="icon-twitter"></i>
+        <i class="icon-instagram"></i>
+      </div>
+      <div id="footer__copy">
+        <p>&copy; Copyright 2018 Huddle. All rights reserved.</p>
       </div>
       </footer>
     </body>

@@ -1,0 +1,11 @@
+@import url(base);
+
+@mixin btn {
+    color: white;
+    background-color:$Primary-color;
+    margin: 2rem 3rem 3rem 3rem;
+    padding: .6rem .8rem 0.8rem .8rem;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: nth($Body-call-to-action-family-weight,4);
+}
