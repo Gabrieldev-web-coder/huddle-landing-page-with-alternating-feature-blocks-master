@@ -22,9 +22,15 @@
             font-weight:nth($Body-call-to-action-family-weight,4);
             font-size: 12px;
             margin: 1.5rem 1rem 0.5rem .5rem;
-            padding: .3rem 1.6rem .3rem 1.6rem;
+            padding: 0.4rem 1.6rem 0.4rem 1.6rem;
             border-radius: 30px;
             box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1);
+        }
+
+        .header__try:hover{
+            cursor: pointer;
+            transition: .5s;
+            opacity: 85%;
         }
     }
     .header__h1{
@@ -40,6 +46,12 @@
         @include btn;
     }
 
+    .header__btn:hover{
+            cursor: pointer;
+            transition: .5s;
+            opacity: 85%;
+    }
+
     .header__ilustration{
         margin: 1.4rem 0rem 1rem 0rem;
         padding: 1rem 0rem 1.8rem 0rem;
@@ -53,5 +65,119 @@
     .main__article{
         @include article;
     }
+    .header__btn{
+        @include article;
+        margin: 1rem .5rem .5rem .5rem;
+        padding: .6rem;
+        height: 159px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: white;
+        position: relative;
+        top: 11rem;
+        .main__h2{font-size: 19px}
+        .header__span{
+            @include btn;
+            font-size: 12px;
+        }
+
+        .header__span:hover{
+            cursor: pointer;
+            transition: .5s;
+            opacity: 80%;
+        }
+    }
 }
 
+#footer{
+    color: white;
+    background-color: nth($Neutral-colors,2);
+    padding: 5rem 1rem 1rem 1rem;
+    line-height: 2rem;
+    figure{text-align: left;}
+    #footer__contact{margin-top: 5rem;}
+    .footer__figure{.footer__img{width: 160px;}}
+    .footer__figure{.footer__icon{width: 20px;}}
+    .footer__container{
+        .footer__figure{margin: 1.3rem 1.4rem .4rem .4rem;}
+        display: flex;
+        align-items: end;
+    }
+    #footer__about{
+        display: flex;
+        flex-direction: column;
+        margin: 3rem 0rem 3rem 0rem;
+        .footer__span{
+            margin: 0rem 1rem 1rem 0rem; 
+            border-bottom: solid 1px transparent; 
+            cursor: pointer;
+        }
+        .footer__span:hover{
+            transition: .5s;
+            border-bottom: 1px solid white;
+            width: fit-content;
+        }
+    }
+    #footer__social{
+        display: flex;
+        justify-content: center;
+        .icon-facebook,.icon-twitter,.icon-instagram{
+            cursor: pointer;
+            border: solid 1px white;
+            border-radius: 30px;
+            padding: .5rem;
+            margin: .5rem;
+        }
+        .icon-facebook:hover{
+            transition: .5s;
+            color: $Primary-color;
+            border: solid 1px $Primary-color;
+        }
+
+        .icon-twitter:hover{
+            transition: .5s;
+            color: $Primary-color;
+            border: solid 1px $Primary-color;
+        }
+
+        .icon-instagram:hover{
+            transition: .5s;
+            color: $Primary-color;
+            border: solid 1px $Primary-color;
+        }
+    }
+    #footer__copy{
+        text-align: center;
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width:768px){
+    #header{
+        background-image: url(/images/bg-hero-desktop.svg);
+        display: grid;
+        grid-template-areas:
+        "na na na"
+        "h1 img img"
+        "p  img img"
+        "btn img img";
+
+        #header__nav{
+            grid-area: na;
+            .header__try{
+                padding: .7rem 2.6rem .7rem 2.6rem;
+            }
+        }
+        .header__h1{
+            grid-area: h1; 
+            text-align: left; 
+            margin: 5% 8% 5% 5%;
+            font-size: 2rem;
+            line-height: 2.8rem;
+        }
+        .header__p{grid-area: p; text-align: left;}
+        .header__btn{grid-area: btn; margin: 1rem 0rem 1rem 1rem; width: 60%;}
+        .header__ilustration{grid-area: img;}
+    }
+}
