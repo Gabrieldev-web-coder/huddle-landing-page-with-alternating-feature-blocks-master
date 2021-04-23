@@ -35,16 +35,14 @@
     }
     .header__h1{
         font-size: 1.5rem;
-        margin: 5% 8% 5% 8%;
+        margin:0rem 3rem 0rem 3rem;
         line-height: 2.2rem;
     }
     .header__p{
-        margin: 5% 5% 5% 5%;
+        margin: 1rem 1.5rem 0rem 1.5rem;
         line-height: 1.8rem;
     }
-    .header__btn{
-        @include btn;
-    }
+    .header__btn{@include btn;}
 
     .header__btn:hover{
             cursor: pointer;
@@ -59,16 +57,17 @@
 }
 
 #main{
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     text-align: center;
     margin: 2.5rem 0rem 6rem 0rem;
-    .main__article{
-        @include article;
-    }
+    .main__article{@include article;}
     .header__btn{
         @include article;
         margin: 1rem .5rem .5rem .5rem;
         padding: .6rem;
+        width: 330px;
         height: 159px;
         display: flex;
         flex-direction: column;
@@ -153,31 +152,40 @@
     }
 }
 
+@media screen and (min-width:575px){
+    #header{#header__nav{.header__try{ padding: .7rem 3rem .7rem 3rem;}}}
+    #main{.header__btn{padding: 0.6rem 2.6rem .6rem 2.6rem;}.main__article{.main__figure{.main__img{width: 300px;}}}}}
+
 @media screen and (min-width:768px){
     #header{
         background-image: url(/images/bg-hero-desktop.svg);
-        display: grid;
-        grid-template-areas:
-        "na na na"
-        "h1 img img"
-        "p  img img"
-        "btn img img";
+        .header__grid{
+            display: grid;
+            grid-template-columns: 46% 54%;
+            grid-template-areas:
+            "tex img";
+            .header__container{
+                margin-top: 21%;
+                grid-area: tex;
+                .header__h1{ text-align: left; margin: 0rem 1rem 0rem 2rem;}
+                .header__p{ text-align: left; margin: 1rem 1.5rem 0rem 2rem;}
+                .header__btn{ width: 210px; margin: 1.5rem 3rem 1rem 2rem;}
+            }
+            .header__container:nth-of-type(2){ margin:0; grid-area: img;}
+        }
+    }
+    #main{
+        .main__article{
+            .main__container,.main__grow,.main__users{
+                display: flex;
+                align-items: center;
+                text-align: left;
+                .main__text{margin: 0rem 2rem 0rem 2rem}
+            }
 
-        #header__nav{
-            grid-area: na;
-            .header__try{
-                padding: .7rem 2.6rem .7rem 2.6rem;
+            .main__grow,.main__users{
+                flex-direction: row-reverse;
             }
         }
-        .header__h1{
-            grid-area: h1; 
-            text-align: left; 
-            margin: 5% 8% 5% 5%;
-            font-size: 2rem;
-            line-height: 2.8rem;
-        }
-        .header__p{grid-area: p; text-align: left;}
-        .header__btn{grid-area: btn; margin: 1rem 0rem 1rem 1rem; width: 60%;}
-        .header__ilustration{grid-area: img;}
     }
 }
