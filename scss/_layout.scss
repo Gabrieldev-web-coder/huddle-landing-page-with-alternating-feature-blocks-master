@@ -159,7 +159,14 @@
 @media screen and (min-width:768px){
     #header{
         background-image: url(/images/bg-hero-desktop.svg);
+        #header__nav{
+            margin-bottom: 0rem;
+            .header__figure{
+                margin: 2.5rem 1rem 0rem 1rem;
+                .header__img{width: 65%;}}
+            .header__try{margin: 2.5rem 3rem 0rem 1rem;}}
         .header__grid{
+            margin: 0% 0% 0% 5%;
             display: grid;
             grid-template-columns: 46% 54%;
             grid-template-areas:
@@ -167,15 +174,16 @@
             .header__container{
                 margin-top: 21%;
                 grid-area: tex;
-                .header__h1{ text-align: left; margin: 0rem 1rem 0rem 2rem;}
-                .header__p{ text-align: left; margin: 1rem 1.5rem 0rem 2rem;}
-                .header__btn{ width: 210px; margin: 1.5rem 3rem 1rem 2rem;}
+                .header__h1{ font-size: 2rem; text-align: left; margin: 0rem 1rem 0rem 0rem;}
+                .header__p{ text-align: left; margin: 1rem 1.5rem 0rem 0rem;}
+                .header__btn{ width: 210px; margin: 1.5rem 3rem 1rem 0rem; padding: 0.9rem 1.7rem 1rem 1.7rem;}
             }
             .header__container:nth-of-type(2){ margin:0; grid-area: img;}
         }
     }
     #main{
         .main__article{
+            width: 85%;
             .main__container,.main__grow,.main__users{
                 display: flex;
                 align-items: center;
@@ -183,9 +191,7 @@
                 .main__text{margin: 0rem 2rem 0rem 2rem}
             }
 
-            .main__grow,.main__users{
-                flex-direction: row-reverse;
-            }
+            .main__grow,.main__users{flex-direction: row-reverse;}
         }
     }
 }

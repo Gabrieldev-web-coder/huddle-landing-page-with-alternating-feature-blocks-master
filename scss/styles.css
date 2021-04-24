@@ -80,7 +80,6 @@ figure img {
   padding: .9rem 0.7rem 1rem 0.8rem;
   border-radius: 30px;
   font-size: 14px;
-  font-weight: 700;
 }
 
 #header .header__btn:hover {
@@ -182,7 +181,6 @@ figure img {
   padding: .9rem 0.7rem 1rem 0.8rem;
   border-radius: 30px;
   font-size: 14px;
-  font-weight: 700;
   font-size: 12px;
 }
 
@@ -314,7 +312,20 @@ figure img {
   #header {
     background-image: url(/images/bg-hero-desktop.svg);
   }
+  #header #header__nav {
+    margin-bottom: 0rem;
+  }
+  #header #header__nav .header__figure {
+    margin: 2.5rem 1rem 0rem 1rem;
+  }
+  #header #header__nav .header__figure .header__img {
+    width: 65%;
+  }
+  #header #header__nav .header__try {
+    margin: 2.5rem 3rem 0rem 1rem;
+  }
   #header .header__grid {
+    margin: 0% 0% 0% 5%;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 46% 54%;
@@ -328,22 +339,27 @@ figure img {
     grid-area: tex;
   }
   #header .header__grid .header__container .header__h1 {
+    font-size: 2rem;
     text-align: left;
-    margin: 0rem 1rem 0rem 2rem;
+    margin: 0rem 1rem 0rem 0rem;
   }
   #header .header__grid .header__container .header__p {
     text-align: left;
-    margin: 1rem 1.5rem 0rem 2rem;
+    margin: 1rem 1.5rem 0rem 0rem;
   }
   #header .header__grid .header__container .header__btn {
     width: 210px;
-    margin: 1.5rem 3rem 1rem 2rem;
+    margin: 1.5rem 3rem 1rem 0rem;
+    padding: 0.9rem 1.7rem 1rem 1.7rem;
   }
   #header .header__grid .header__container:nth-of-type(2) {
     margin: 0;
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: img;
+  }
+  #main .main__article {
+    width: 85%;
   }
   #main .main__article .main__container, #main .main__article .main__grow, #main .main__article .main__users {
     display: -webkit-box;
